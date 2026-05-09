@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Pelota Ping Pong DHS 3 Estrellas 40+",
+        "description": "Pelota profesional de 40mm para tenis de mesa, calidad 3 estrellas, ideal para competiciones",
+        "price": 10,
+        "stock": 10,
+        "brand": "DHS",
+        "image": "/img/DHS-3-stars-balls.png",
+        "category": "pelotas"
+    },
+    {
+        "id": 2,
+        "name": "Yinhe Blue Moon 12",
+        "description": "Non sticky rubber, great spin, medium-soft sponge. Ideal for european style players ",
+        "price": 20,
+        "stock": 2,
+        "brand": "Yinhe",
+        "image": "/img/yinhe-blue-moon-12.png",
+        "category": "rubbers"
+    },
+    {
+        "id": 3,
+        "name": "Loki RXTON III Pro",
+        "description": "Classic chinese tacky rubber. Hard or medium sponge.",
+        "price": 30,
+        "stock": 3,
+        "brand": "Loki",
+        "image": "/img/loki-rxton-3-pro.png",
+        "category": "rubbers"
+    },
+    {
+        "id": 4,
+        "name": "Pelota Sanwei TR 3 Star 40+ ABS",
+        "description": "Ideal para entrenamientos y competiciones amateur. No esta aprobada por la ITTF",
+        "price": 10,
+        "stock": 10,
+        "brand": "Sanwei",
+        "image": "/img/pelota-sanwei-tr-3-star-40+-abs.png",
+        "category": "pelotas"
+    }
+]
