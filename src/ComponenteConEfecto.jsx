@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-const [contador, setContador] = useState(0);
 export const ComponenteConEfecto = () => {
+    const [contador, setContador] = useState(0);
     const [mostrarMensaje, setMostrarMensaje] = useState(true);
     useEffect(() => {
         console.log("Componente montado");
