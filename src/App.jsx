@@ -5,6 +5,7 @@ import { Footer } from './components/Footer/Footer.jsx'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer.jsx'
 import { ComponenteConEfecto } from './ComponenteConEfecto.jsx'
 import { Routes, Route } from "react-router-dom"
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,7 @@ function App() {
           que va a renderizarse luego de elegir ir a esa ruta */}
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/cart" element={<h1>Carrito</h1>} />
+          <Route path="/product/:id" element={<ItemDetailContainer />} />
         </Routes>
       </main>
       <Footer />
