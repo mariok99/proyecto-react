@@ -22,14 +22,10 @@ export const ItemListContainer = () => {
     myUseEffect(fetchProducts, [], setLoading)
 
     if (loading) return <p>Loading...</p>
-    //el boton simula que obtengo los productos de una base de datos, algo así
-    //Por eso luego de eso se llama a ItemList?
-    //si, se lo mando como prop
-    //Como react actualiza los componentes automaticamente, cuando apriete los botones se
-    //va a actualizar ItemList, supongo.
+
     return (
         <section>
-            <h1>lista de productos</h1>
+            <h1>Product list</h1>
             <ItemList products={products} />
         </section>
     )
