@@ -47,7 +47,10 @@ cuando tengo que renderizar muchos componenetes, ejemplo Item, siempre tengo que
     - onChange: detecta cabmios en inputs del formulario
     - onMouseOver
     - onMouseDown
-    
+
+## Que es un hook
+Función que empieza con use, se utilizan en componentes funcionales y permiten gestionar el estado de los componentes y otros efectos secundarios. Abajo explicamos los estados locales y los efectos secundarios.
+
 ## Manejo del estado local con useState
 * useState es un hook que permite manejar el estado local de un componente.
 * la sintaxis es: 
@@ -55,7 +58,36 @@ cuando tengo que renderizar muchos componenetes, ejemplo Item, siempre tengo que
 const [estado, setEstado] = useState(valorInicial);
 ```
 * declara una variable (estado) y una función para modificarla (setEstado). La función debe empezar por set y luego el nombre de la variable en mayusculas.
-* Creo que si no uso useState los componentes no se actualizan, ya que es la forma de avisar a react que algo cambió. Una variable normal no le puede avisar.
+* No usar useState hace que los componentes no se actualicen, ya que es la forma de avisar a react que algo cambió. Una variable normal no le puede avisar.
+* useState con objetos mutables:
+  * Ejemplo array de objetos cart:
+  Supongamos que quiero aumentar la cantidad de un producto p de uno de los productos del cart. Si solo actualizo p (ej. p.cantidad = p.cantidad + 1), react no se entera del cambio porque el objeto p es el mismo y, técnicamente, cart no cambió, por lo que no se vuelve a renderizar. Por lo que debemos crear una copia del objeto, actualizarla y luego guardarlo en el array. Ahora el array si cambió, ya que tiene un objeto distinto a p, por lo que sí se vuelve a renderizar
+
+  ```javascript
+  // Forma INCORRECTA: modificar directamente el array
+  const aumentarCantidad = (productoId) => {
+    // ❌ ¡Error! Mutable: Estamos modificando el array original
+    const nuevoCart = cart;
+    nuevoCart.forEach(item => {
+      if (item.id === productoId) {
+        item.cantidad++;
+      }
+    });
+    setCart(nuevoCart); // React no detectará el cambio porque es el mismo objeto
+  };
+
+  // Forma CORRECTA: Crear un nuevo array (Inmutabilidad)
+  const aumentarCantidad = (productoId) => {
+    setCart(prevCart => 
+      prevCart.map(item => 
+        // ✅ ¡Correcto! Crea un nuevo objeto para el item modificado
+        item.id === productoId 
+          ? { ...item, cantidad: item.cantidad + 1 } 
+          : item
+      )
+    ); // React detectará el cambio correctamente
+  };
+  ``` 
 
 ## Efectos secundarios con useEffect
 * useEffect es un hook que permite ejecutar código fuera del flujo principal de renderizado. .
@@ -84,3 +116,9 @@ useEffect(() => {
 ## Container y Presentational Components
 * Container Components: se encargan de la lógica (ej. definen funciones que van a usar los presentational components), manejan el estado, hacen peticiones a la API, realizan validaciones, etc.
 * Presentational Components: se encargan de la apariencia, reciben datos como props y los muestran. 
+
+## Contexto
+- Se crean las funciones / estados necesarios
+- Se define el context
+- Creamos un hook para el carrito
+- Creamos el provider: componente que envuelve a los otros componentes y les pasa el context
