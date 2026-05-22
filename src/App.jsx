@@ -6,6 +6,7 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { ComponenteConEfecto } from './ComponenteConEfecto.jsx'
 import { Routes, Route } from "react-router-dom"
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer.jsx'
+import { FormContainer } from './Form/FormContainer.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/cart" element={<h1>Carrito</h1>} />
           <Route path="/product/:id" element={<ItemDetailContainer />} />
+          <Route path="/form" element={<FormContainer />} />
         </Routes>
       </main>
       <Footer />
