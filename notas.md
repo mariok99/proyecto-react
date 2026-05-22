@@ -81,3 +81,6 @@ useEffect(() => {
 * Esto se explica en App.jsx
 * Link: componente de react-router-dom que se utiliza para elegir una Route para renderizar lo que indicado en la Route en App.jsx.
 
+## Container y Presentational Components
+* Container Components: se encargan de la lógica (ej. definen funciones que van a usar los presentational components), manejan el estado, hacen peticiones a la API, realizan validaciones, etc.
+* Presentational Components: se encargan de la apariencia, reciben datos como props y los muestran. 
