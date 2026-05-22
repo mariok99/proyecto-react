@@ -13,7 +13,7 @@ export const ItemList = ({ products }) => {
                 // estoy suponiendo que cualquier Item va a ser clickable
                 // también que siempre va a ser un producto. Ver como
                 // se puede generalizar.
-                <Link to={`/product/${unProducto.id}`} key={unProducto.id}>
+                <Link to={`/product/${unProducto.id}`} key={unProducto.id} className="product-link">
                     <Item {...unProducto} />
                 </Link>
             ))}
