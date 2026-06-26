@@ -7,6 +7,7 @@ import { ComponenteConEfecto } from './ComponenteConEfecto.jsx'
 import { Routes, Route } from "react-router-dom"
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer.jsx'
 import { FormContainer } from './Form/FormContainer.jsx'
+import { CartView } from './components/Cart/CartView.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,7 +23,7 @@ function App() {
           {/*cada ruta tiene element, que es el componente
           que va a renderizarse luego de elegir ir a esa ruta */}
           <Route path="/" element={<ItemListContainer />} />
-          <Route path="/cart" element={<h1>Carrito</h1>} />
+          <Route path="/cart" element={<CartView />} />
           <Route path="/products" element={<ItemListContainer />} />
           <Route path="/product/:id" element={<ItemDetailContainer />} />
           <Route path="/form" element={<FormContainer />} />

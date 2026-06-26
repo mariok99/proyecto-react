@@ -30,6 +30,8 @@ export const ItemDetailContainer = () => {
         <section>
             <h1> Product Details</h1>
             <div className="products-container">
+                {/*Necesito ItemDetail para agregar 
+                la función de agregar al carrito */}
                 <ItemDetail item={itemDetail} />
             </div>
         </section>

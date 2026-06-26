@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
 import './Nav.css'
-import { useCart } from "../../context/CartContext";
+import { useCart } from "../../context/CartContext.jsx";
 
 export const Nav = () => {
-    const {getTotalProducts} = useCart();
+    const { getTotalProducts } = useCart();
     const totalProducts = getTotalProducts();
     return (
         <nav>
@@ -14,7 +14,7 @@ export const Nav = () => {
 
                 <li>
                     <Link to={"/cart"}>
-                        Cart items: 
+                        Cart
                         {totalProducts > 0 && <span className="incart">{totalProducts}</span>}
                     </Link>
                 </li>

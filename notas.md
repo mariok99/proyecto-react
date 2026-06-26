@@ -118,6 +118,7 @@ useEffect(() => {
 * Presentational Components: se encargan de la apariencia, reciben datos como props y los muestran. 
 
 ## Contexto
+- definición: nos permite pasar datos entre componentes sin tener que pasarlos manualmente props por props (prop drilling)
 - Se crean las funciones / estados necesarios
 - Se define el context
 - Creamos un hook para el carrito

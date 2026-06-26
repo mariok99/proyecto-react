@@ -29,22 +29,22 @@ export const CartProvider = ({ children }) => {
         //luego veo como hago para agregar varias veces un mismo producto
         //tengo que usar el componente Count, pero no esta en el carrito,
         // hay que ver como hacer.
-        
+
         if (!isInCart(product)) {
             setCart([...cart, product]);
             alert("Successfully added to cart")
         }
-        else{
+        else {
             alert("Product is already in the cart ")
         }
     }
     const removeItem = (productToRemove) => {
         const updatedCart = cart.filter(product => product.id != productToRemove)
-        setCart([updatedCart]);
-        if(!isInCart(productToRemove)){
+        setCart(updatedCart);
+        if (!isInCart(productToRemove)) {
             alert("Product eliminated")
         }
-        else{
+        else {
             alert("Producto did not eliminate")
         }
     }
@@ -63,7 +63,7 @@ export const CartProvider = ({ children }) => {
         clearCart();
         navigate("/");
     }
-    const values = {checkout, addToCart, clearCart, removeItem, getTotalProducts, getCartTotal}
+    const values = { checkout, addToCart, clearCart, removeItem, getTotalProducts, getCartTotal, cart }
     //acá se relaciones el CartContext con las funciones.
     //use Cart se usa afuera, para poder usar CartContext
     return (
