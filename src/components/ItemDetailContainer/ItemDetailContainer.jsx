@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { ItemDetail } from "../ItemDetail/ItemDetail.jsx";
-import { myUseEffect } from "../../myFunctions/myUseEffect.jsx"
+import { useEffectLoading } from "../../utils/myUseEffect.jsx"
+import { getProductById } from "../../services/productServices.js";
 
 export const ItemDetailContainer = () => {
     const { id } = useParams();
@@ -10,9 +11,7 @@ export const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true);
 
     const fetchProductDetail = async () => {
-        const response = await fetch("/data/products.json");
-        const data = await response.json();
-        const itemDetail = data.find((item) => String(item.id) === id);
+        const itemDetail = await getProductById(id);
 
         if (itemDetail) {
             setItemDetail(itemDetail);
@@ -21,7 +20,7 @@ export const ItemDetailContainer = () => {
         throw new Error("Elemento no encontrado");
     }
 
-    myUseEffect(fetchProductDetail, [], setLoading);
+    useEffectLoading(fetchProductDetail, [], setLoading);
 
     if (loading) return <p>Loading...</p>
     if (!itemDetail) return <p>Product not exists</p>
