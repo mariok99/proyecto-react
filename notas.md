@@ -122,4 +122,12 @@ useEffect(() => {
 - Se crean las funciones / estados necesarios
 - Se define el context
 - Creamos un hook para el carrito
-- Creamos el provider: componente que envuelve a los otros componentes y les pasa el context
+- Creamos el provider: componente que envuelve a los otros componentes y les pasa el context.
+
+## Entrega Final
+* Modificación y delete no hacen falta
+* añadir mail y contraseña si uso uno especial para loguearme
+* Ocultar config.js de firebase (ver si el server de vercel sigue funcionando)
+
+## Clase 10
+- Si quiero agregar secciones por categorías ver clase 10.

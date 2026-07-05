@@ -1,7 +1,7 @@
 import {
     collection, getDocs, doc, getDoc, addDoc, query, where
 } from "firebase/firestore";
-import { db } from "../firebase/config";
+import { db } from "../.firebase/config";
 
 const productsRef = collection(db, "products");
 
@@ -57,5 +57,18 @@ export const getProductsBy = async (attribute) => {
     } catch (error) {
         console.log("Occur an error while retreving product", error);
         return [];
+    }
+}
+
+export const createProduct = async (product) => {
+    try {
+        if (!validateProducto(product)) {
+            const docRef = await addDoc(productsRef, product);
+            return docRef.id;
+        }
+        return null;
+    } catch (error) {
+        console.log("Occur an error while creating product", error);
+        return null;
     }
 }
