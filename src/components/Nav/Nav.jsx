@@ -24,6 +24,14 @@ export const Nav = () => {
                 </li>
 
                 <li>
+                    <Link to={"/category/pelotas"}> Pelotas</Link>
+                </li>
+
+                <li>
+                    <Link to={"/category/rubbers"}> Rubbers</Link>
+                </li>
+
+                <li>
                     <Link to={"/form"}>Form</Link>
                 </li>
             </ul>

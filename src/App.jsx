@@ -23,6 +23,7 @@ function App() {
           {/*cada ruta tiene element, que es el componente
           que va a renderizarse luego de elegir ir a esa ruta */}
           <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:category" element={<ItemListContainer />} />
           <Route path="/cart" element={<CartView />} />
           <Route path="/products" element={<ItemListContainer />} />
           <Route path="/product/:id" element={<ItemDetailContainer />} />
