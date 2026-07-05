@@ -1,30 +1,30 @@
-# proyecto-react
+# Proyecto React
 
-Proyecto del curso **Talento Tech** — e-commerce desarrollado con React + Vite y Firebase (Firestore) como DB
+Project for **Talento Tech** course — e-commerce developed with React + Vite and Firebase (Firestore) as DB
 
-🚀 **En producción:** 
+🚀 **In production:** 
 https://delicate-cascaron-7e96e2.netlify.app/
 
 ---
 
-## Instalación y configuración local
+## Installation and configuration
 
-### 1. Clonar el repositorio
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/mariok99/proyecto-react.git
 cd proyecto-react
 ```
 
-### 2. Instalar dependencias
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Configurar las variables de entorno
+### 3. Configure environment variables
 
-Este proyecto usa **Firebase** como base de datos. 
+This project uses **Firebase** as its database. 
 Rename `.env_example` to `.env` and replace the values with your own values.
 
 > You can find these values in the Firebase console:
