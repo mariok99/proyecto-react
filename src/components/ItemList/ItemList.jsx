@@ -14,7 +14,7 @@ export const ItemList = ({ products }) => {
                 // también que siempre va a ser un producto. Ver como
                 // se puede generalizar.
                 <Link to={`/product/${unProducto.id}`} key={unProducto.id} className="product-link">
-                    <Item {...unProducto} />
+                    <Item title={unProducto.title} description={unProducto.description} price={unProducto.price} image={unProducto.image} />
                 </Link>
             ))}
         </div>
