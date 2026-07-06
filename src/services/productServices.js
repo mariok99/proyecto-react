@@ -2,6 +2,7 @@ import {
     collection, getDocs, doc, getDoc, addDoc, query, where
 } from "firebase/firestore";
 import { db } from "../firebase/config.js";
+import { validateProduct } from "../utils/validateProduct.js";
 
 const productsRef = collection(db, "products");
 
@@ -62,8 +63,9 @@ export const getProductsBy = async (attribute) => {
 
 export const createProduct = async (product) => {
     try {
-        if (!validateProducto(product)) {
+        if (Object.keys(validateProduct(product)).length === 0) {
             const docRef = await addDoc(productsRef, product);
+            console.log("docRef.id:", docRef.id);
             return docRef.id;
         }
         return null;
