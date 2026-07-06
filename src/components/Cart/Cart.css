@@ -9,7 +9,11 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: 2rem;
-    gap: 3rem;
+    gap: 1rem;
+}
+
+.cart-summary-items {
+    margin: 0.5rem;
 }
 
 .empty-cart {
@@ -26,4 +30,9 @@
 .cart-actions p {
     font-size: 2rem;
     padding: 1rem;
+}
+
+.card h5,
+.card p {
+    color: black;
 }
