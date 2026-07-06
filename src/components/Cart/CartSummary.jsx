@@ -6,9 +6,9 @@ export const CartSummary = () => {
 
     return (
         <>
-            <p>Total: ${total}</p>
-            <button className="btn bg success primary" onClick={checkout}>
-                Purchase
+            <p className="cart-summary-items">Total: ${total}</p>
+            <button className="btn bg success primary cart-summary-items" onClick={checkout}>
+                Buy
             </button>
         </>
     )
