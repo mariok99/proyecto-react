@@ -3,11 +3,12 @@ import './App.css'
 import { Header } from './components/Header/Header.jsx'
 import { Footer } from './components/Footer/Footer.jsx'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer.jsx'
-import { ComponenteConEfecto } from './ComponenteConEfecto.jsx'
 import { Routes, Route } from "react-router-dom"
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer.jsx'
 import { FormContainer } from './Form/FormContainer.jsx'
 import { CartView } from './components/Cart/CartView.jsx'
+import { ProductFormContainer } from './components/adminComponents/ProductFormContainer.jsx'
+import { ProductSuccess } from './components/adminComponents/ProductFormSuccess.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,6 +29,9 @@ function App() {
           <Route path="/products" element={<ItemListContainer />} />
           <Route path="/product/:id" element={<ItemDetailContainer />} />
           <Route path="/form" element={<FormContainer />} />
+
+          <Route path="/admin" element={<ProductFormContainer />} />
+          <Route path="/success/:id" element={<ProductSuccess />} />
         </Routes>
       </main>
       <Footer />
