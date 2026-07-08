@@ -54,8 +54,6 @@ export const ProductFormContainer = () => {
                 stock: Number(product.stock),
                 image: imageUrl
             }
-            console.log("image:", image);
-            console.log("productFormat:", productFormat);
             const id = await createProduct(productFormat);
 
             alert(`Producto agregado exitosamente con ID: ${id}`);
@@ -66,11 +64,10 @@ export const ProductFormContainer = () => {
             setImage(null);
             // replace true es para reemplazar la entrada del historial, 
             // así no puedo ver el formulario con los datos que se acaban de subir.
-            navigate(`/success/${id}`, { replace: true })
+            navigate(`/admin/products/success/${id}`, { replace: true })
         } catch (error) {
             console.error("Error adding product:", error);
             setErrors({ submit: error.message });
-            console.log("Errors: ", errors);
         } finally {
             setLoading(false);
         }
