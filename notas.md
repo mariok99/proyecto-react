@@ -131,3 +131,13 @@ useEffect(() => {
 
 ## Clase 10
 - Si quiero agregar secciones por categorías ver clase 10.
+
+## Clase 12
+### Componente Outlet
+Permite mostrar los componentes hijos que están anidados en la ruta. Por ejemplo, en AdminLayout, puedo mostrar el componente Dashboard, ProductFormContainer, etc. y cuando navegue a otra ruta dentro de admin, mostraré el nuevo componente. Es decir que funciona como un "placeholder" o "contenedor" para los componentes hijos. 
+
+### ¿Por qué uso outlet en lugar de children?
+Respuesta: Outlet es un componente de react-router-dom que se utiliza para mostrar los componentes hijos que están anidados en la ruta. Mientras que children es una prop de react que se utiliza para pasar componentes hijos al componente padre. Children no maneja rutas anidadas, solo muestra lo que le pases. 
+
+### Protected Route
+Permite proteger rutas, es decir, que solo se pueda acceder a ellas si se cumplen ciertas condiciones (en este caso, si el usuario está logueado).  

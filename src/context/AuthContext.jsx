@@ -39,6 +39,8 @@ export const AuthProvider = ({ children }) => {
         }
     }
 
+    //supongo que en este punto se renderiza los componentes dentro de un contexto
+    //logueado.
     return (
         <AuthContext.Provider value={{ user, loading, login, logout }}>
             {children}
