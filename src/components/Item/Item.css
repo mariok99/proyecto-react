@@ -6,9 +6,8 @@
     align-items: center;
     /* Centra los elementos horizontalmente */
     gap: 1rem;
-
+    margin: 1rem;
     background-color: rgb(253, 231, 190);
-    border: 1px solid #e0e0e0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* Sombra suave para dar efecto de elevación (3D) */
